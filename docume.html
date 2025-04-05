@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#2f4aa3;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .code {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .btn-voltar {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: #faf7f7;
+            color: rgb(17, 16, 16);
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn-voltar:hover {
+            background: #f5f2f2;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn-voltar" onclick="history.back()">Voltar</button>
+    <div class="container">
+        <h1>Documentação da AGSOFTY</h1>
+        <p>Bem-vindo à documentação da AGSOFTY. Aqui você encontrará informações sobre como utilizar nossos serviços.</p>
+        
+        <div class="section">
+            <h2>1. Introdução</h2>
+            <p>Este guia fornece instruções detalhadas sobre os produtos e serviços da AGSOFTY, ajudando desenvolvedores e clientes a entenderem melhor sua funcionalidade.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. Instalação</h2>
+            <p>Para utilizar nossos serviços, siga os passos abaixo:</p>
+            <div class="code">
+                npm install agsofty-sdk
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. Configuração</h2>
+            <p>Para configurar corretamente, edite o arquivo de configuração conforme abaixo:</p>
+            <div class="code">
+                {
+                    "apiKey": "SUA_CHAVE_AQUI",
+                    "environment": "production"
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

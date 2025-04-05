@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>serviços</title>
+</head>
+<body>
+   
+      
+        <style>
+             body {
+        font-family: Arial, sans-serif;
+        margin: 17px;
+        padding: 20px;
+        background-color:  #1a5170;
+        text-align: center;
+    }
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background:  #1a5170;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        color: #333;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .item {
+        background:  #2f4aa3;
+        color: white;
+        padding: 15px;
+        border-radius: 1px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s, transform 0.2s;
+        text-align: center;
+    }
+    .item:hover {
+        background: #24788d;
+        transform: scale(1.05);
+    }
+    .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgb(42, 117, 146);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        display: none;
+    }
+    .modal button {
+        margin-top: 10px;
+        padding: 10px;
+        background: #f5f3f3;
+        color: rgb(7, 7, 7);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .modal button:hover {
+        background:#22634f;
+    }
+    .modal img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .btn-voltar {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: #faf7f7;
+            color: rgb(17, 16, 16);
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn-voltar:hover {
+            background: #f5f2f2;
+        }
+        </style>
+   
+
+</head>
+<body>
+<div class="container">
+    <button class="btn-voltar" onclick="history.back()">Voltar</button>
+    <h2 style="color: #f5f3f3;Nossos Serviços" ></h2>
+    <div class="grid">
+        <div class="item" onclick="showAgenteBai()">LOJA DE ELECTRONICA E TECNOLOGIA</div>
+        <div class="item" onclick="showBar()">LOUNGE BAR</div>
+        <div class="item" onclick="showDrinks()">Konica</div>
+        <div class="item" onclick="showConica()">AGENTE BAI</div>
+     
+    </div>
+</div>
+
+<div id="drinkModal" class="modal">
+    <h3>Konica</h3>
+    <img src="jpg/" alt="i">
+    <p>Localização: <a href="https://www.google.com/maps?q=localizacao_do_bar" target="_blank">Ver no Google Maps</a></p>
+   
+    <button onclick="closeModal('drinkModal')">Fechar</button>
+</div>
+
+<div id="barModal" class="modal">
+    <h3>Nosso Bar</h3>
+    <img width="200px" src="i" alt="Imagem do Agente Bai">
+    <p>LOCALIZAO:Centralidade </p>
+    <P>OFEREÇEMOS PRODUTOS DE QUALIDADE</P>
+    <button onclick="closeModal('barModal')">Fechar</button>
+</div>
+
+<div id="agenteBaiModal" class="modal">
+    <h3>LOJA</h3>
+    <img width="200px" src="imagens.jpg/MATERIAIS.png" alt="Imagem do Agente Bai">
+    <p>Localização: no bairro tchifutchi</p>
+    <p>Loja de consumíveis de materiais informatico</p>
+    
+   
+    <button onclick="closeModal('agenteBaiModal')">Fechar</button>
+</div>
+
+<div id="conicaModal" class="modal">
+    <h3>AGENTE BAI</h3>
+    <img src="imagens.jpg/AGENTE BAI.png" alt="Imagem da Conica">
+    <p>LOCALIZAO:Rua  Hoji Yha Henda, Bairro Saidy M </a></p>
+    <P>LEVATAMENTO</P>
+    <P>DEPÓSITO</P>
+    <P>ABERTURA DE CONTA</P>
+    <P>E OUTROS </P>
+    <button onclick="closeModal('conicaModal')">Fechar</button>
+</div>
+<div id="lojaModal" class="modal">
+    <h3>KONI</h3>
+    <img src="imagens.jpg/MATERIAIS.png" alt="Imagem da Conica">
+    <p>Localização: <a href="https://www.google.com/maps?q=localizacao_da_conica" target="_blank">Ver no Google Maps</a></p>
+    <button onclick="closeModal('conicaModal')">Fechar</button>
+</div>
+
+<script>
+    function showDrinks() {
+        document.getElementById('drinkModal').style.display = 'block';
+    }
+
+    function showBar() {
+        document.getElementById('barModal').style.display = 'block';
+    }
+
+    function showAgenteBai() {
+        document.getElementById('agenteBaiModal').style.display = 'block';
+    }
+
+    function showConica() {
+        document.getElementById('conicaModal').style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+</script>
+    
+</body>
+</html>
